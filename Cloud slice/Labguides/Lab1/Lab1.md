@@ -1,3 +1,4 @@
+## Lab 1: Migrate data from Azure Synapse Analytics to Fabric Data Warehouse
 **Introduction**
 
 This lab provides a comprehensive, hands‑on experience to help you
@@ -694,7 +695,12 @@ the Migration assistant.
 5.  In Connection settings tab enter the below detail and click on
     Connect button
 
-[TABLE]
+| Field    | Value                                              |
+|----------|----------------------------------------------------|
+| Server   | Dedicated SQL server URL (from Task 2 → Step 7)    |
+| Database | Enter your Dedicated SQL database                  |
+| Username | sqladmin                                           |
+| Password | Password321!                                       |
 
 > ![](./media/image109.png)
 
@@ -754,36 +760,22 @@ warehouse.
     execute it
 
 **SQL**
-
-SELECT DISTINCT CASE
-
-WHEN len(tt) = 0
-
-THEN app_name
-
-ELSE tt
-
-END AS application_name
-
-,login_name
-
-,ip_address
-
+```
+SELECT DISTINCT CASE 
+         WHEN len(tt) = 0
+             THEN app_name
+         ELSE tt
+         END AS application_name
+     ,login_name
+     ,ip_address
 FROM (
-
-SELECT DISTINCT app_name
-
-,substring(client_id, 0, CHARINDEX(':', ISNULL(client_id,
-'0.0.0.0:123'))) AS ip_address
-
-,login_name
-
-,isnull(substring(app_name, 0, CHARINDEX('-', ISNULL(app_name, '-'))),
-'h') AS tt
-
-FROM sys.dm_pdw_exec_sessions
-
-) AS a;
+     SELECT DISTINCT app_name
+         ,substring(client_id, 0, CHARINDEX(':', ISNULL(client_id, '0.0.0.0:123'))) AS ip_address
+         ,login_name
+         ,isnull(substring(app_name, 0, CHARINDEX('-', ISNULL(app_name, '-'))), 'h') AS tt
+     FROM sys.dm_pdw_exec_sessions
+     ) AS a;
+```
 
 ![](./media/image118.png)
 
