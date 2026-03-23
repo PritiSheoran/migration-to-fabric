@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Migrate to Microsoft Fabric",
+        "Language": "English",
+        "Files": [
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/migration-to-fabric/refs/heads/main/Cloud%20slice/Labguides/masterdoc/gettingstartedpage.md",
+            "Order": 1
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/migration-to-fabric/refs/heads/main/Cloud%20slice/Labguides/Lab%203/Lab3.md",
+            "Order": 2
+          },
+          {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/migration-to-fabric/refs/heads/main/Cloud%20slice/Labguides/Lab%204/Lab4.md",
+            "Order": 3
+          }
+        ]
+    }
+]
