@@ -41,12 +41,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image3.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />    
+     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.     
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
@@ -86,16 +81,15 @@ By the end of this lab, you will be able to:
 
 1. Select **New Connection → Azure Synapse Analytics (SQL)** and enter the following details, then click **Connect (6)**:
 
-
-    | Field    | Value                                              |
-    |----------|----------------------------------------------------|
+    | Field    | Value   |
+    |----------|---------|
     | Server   | Enter Dedicated SQL Endpoint that you pasted into the Notepad in **Task 2 → Step 7** **(1)**   |
-    | Database | **sql dedicated pool (2)**                  |
+    | Database | **sql dedicated pool (2)** |
     | Authentication | **Basic (3)**      |
-    | Username | `sqladmin`  **(4)**                                        |
-    | Password | `password321!`  **(5)**                                     |
+    | Username | `sqladmin`  **(4)**         |
+    | Password | `password321!`  **(5)**     |
 
-      ![](./media/new4.png)
+    ![](./media/new4.png)
 
 1. Under Source tab, open the **Table** dropdown and select the **fabric_employee** table.
 
@@ -186,12 +180,7 @@ By the end of this lab, you will be able to:
 
     > **Note:** we had renamed *dbo.fabric_employee* to *dbo.employee* for migration
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
+     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.    
 
 ## Task 3: Schedule the Pipeline
 
