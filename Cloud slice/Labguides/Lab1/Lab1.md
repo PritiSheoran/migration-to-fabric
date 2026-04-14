@@ -566,7 +566,6 @@ warehouse.
 
 1. Enter the following code **(1)** into the editor and click **Run (2)** to execute it. This query is used to identify which applications, users, and IP addresses are connecting to an Azure Synapse Dedicated SQL Pool for monitoring and auditing purposes.
 
-
     ```
     SELECT DISTINCT CASE 
             WHEN len(tt) = 0
