@@ -100,15 +100,7 @@ By the end of this lab, you will be able to:
 
 1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
 
-    ![](./media/image15.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />    
+    ![](./media/image15.png)   
 
 ## Task 2: Create a dedicated SQL pool
 
@@ -146,14 +138,7 @@ By the end of this lab, you will be able to:
 
 1. Return to the **Azure portal**. In the **Overview** section of the Synapse workspace, copy the **Dedicated SQL endpoint** and **Dedicated SQL pool** details, and save them in a Notepad for later use.
 
-     ![](./media/image23.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="8004f3de-9884-4a7f-9217-913b84b70092" />    
+     ![](./media/image23.png) 
 
 ## Task 3: Place sample data into the primary storage account
 
@@ -386,13 +371,6 @@ By the end of this lab, you will be able to:
 
      ![](./media/new10.png)      
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="875974db-278a-4941-80d9-42f215abd3e2" />    
-
 ## Task 6: Copy metadata
 
 1. In your Fabric workspace, select the **Migrate** button on the item
@@ -474,14 +452,7 @@ By the end of this lab, you will be able to:
 
 1. Select the exported file to review the **CSV** data.
 
-     ![](./media/image96.png)
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="8c6aea1d-fccd-484f-af63-01504c3d9ab5" />    
+     ![](./media/image96.png) 
 
 ## Task 7: Fix problems using Migration Assistant
 
