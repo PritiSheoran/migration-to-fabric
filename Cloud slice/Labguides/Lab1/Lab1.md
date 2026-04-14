@@ -4,20 +4,10 @@
 
 ## Overview
 
-This lab provides a comprehensive, hands‑on experience to help you
-understand and execute the end‑to‑end process of migrating data and
-metadata from **Azure Synapse Analytics dedicated SQL pools** to the
-**Microsoft Fabric Data Warehouse**. As organizations modernize their
-analytics platforms, Microsoft Fabric offers a unified, scalable, and
-fully integrated environment that simplifies data engineering,
+This lab provides a comprehensive, hands‑on experience to help you understand and execute the end‑to‑end process of migrating data and metadata from **Azure Synapse Analytics dedicated SQL pools** to the **Microsoft Fabric Data Warehouse**. As organizations modernize their analytics platforms, Microsoft Fabric offers a unified, scalable, and fully integrated environment that simplifies data engineering,
 warehousing, real‑time analytics, and business intelligence.
 
-Throughout this lab, you will create and configure Azure Synapse
-components, ingest sample datasets, integrate them through pipelines,
-set up a new Fabric workspace, and use the **Fabric Migration
-Assistant** to seamlessly migrate metadata and data into the Fabric Data
-Warehouse. You will also learn to reroute dependent analytical tools and
-processes to the migrated environment, ensuring business continuity.
+Throughout this lab, you will create and configure Azure Synapse components, ingest sample datasets, integrate them through pipelines, set up a new Fabric workspace, and use the **Fabric Migration Assistant** to seamlessly migrate metadata and data into the Fabric Data Warehouse. You will also learn to reroute dependent analytical tools and processes to the migrated environment, ensuring business continuity.
 
 ## Objectives
 
@@ -43,8 +33,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image6.png)
 
-1. Enter below details to create resource group and then click
-    on **OK**.
+1. Enter below details to create resource group and then click on **OK**.
 
     - **Subscription**: Select the default subscription **(1)**
 
@@ -76,7 +65,7 @@ By the end of this lab, you will be able to:
 
         ![](./media/image9.png)
 
-1. Configure the **Security** settings by selecting **both Microsoft
+1. Configure the **Security** settings by selecting **Use both local and Microsoft Entra ID** authentication as Authentication method:
     
     - **SQL Server admin login:** `sqladmin` **(1)**
 
@@ -86,7 +75,7 @@ By the end of this lab, you will be able to:
 
       ![](./media/image11.png)
 
-1.  In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
+1. In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
 
     ![](./media/image12.png)
 
@@ -107,6 +96,7 @@ By the end of this lab, you will be able to:
 > - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 <validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />    
 
 ## Task 2: Create a dedicated SQL pool
@@ -407,7 +397,7 @@ By the end of this lab, you will be able to:
 
     > **Note:** You may see the **Choose your method** screen select the default option **Upload a file with the source metadata (1)**, then click **Next (2)**.
 
-       ![](./media/image82.png)
+     ![](./media/image82.png)
 
 1. Click **Choose file**
 
