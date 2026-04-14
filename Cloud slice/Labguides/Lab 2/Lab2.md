@@ -41,12 +41,12 @@ By the end of this lab, you will be able to:
 
     ![](./media/image3.png)
 
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      > - Hit the Validate button for the corresponding task.
-      > - If you receive a success message, you can proceed to the next task.
-      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-       <validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />    
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="1ee57940-621b-4154-aeb5-75fd27b16bd0" />    
 
 ## Task 2: Create Linked Connection to Synapse SQL
 
@@ -168,7 +168,6 @@ By the end of this lab, you will be able to:
 
 1. Compare row counts with Synapse: return to the Synapse workspace, navigate to the **Develop (1)** section, click the **+ (2)** button, and select **SQL script (3)** to create a new SQL script.
 
-
     ![](./media/image29.png)
 
 1. Ensure that the SQL script is connected to the **SQL dedicated pool** by selecting it from both the **Connect to** dropdown and the **Use database** dropdown, as highlighted in the image
@@ -187,12 +186,12 @@ By the end of this lab, you will be able to:
 
     > **Note:** we had renamed *dbo.fabric_employee* to *dbo.employee* for migration
 
-     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      > - Hit the Validate button for the corresponding task.
-      > - If you receive a success message, you can proceed to the next task.
-      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-       <validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task.
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+<validation step="01133add-9237-42c6-b39e-0dd25c717758" />    
 
 ## Task 3: Schedule the Pipeline
 
