@@ -35,46 +35,56 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Create a Synapse workspace in the Azure portal
 
-1. In the search bar enter **Synapse** and select **Azure Synapse Analytics** 
+1. In the Azure portal search bar, search for **Synapse Analytics (1)** and select **Azure Synapse Analytics (2).** 
 
     ![](./media/image5.png)   
 
-1. Click **Create**.
+1. In the Azure Synapse Analytics home page, click **+ Create**.
 
     ![](./media/image6.png)
 
 1. Enter below details to create resource group and then click
     on **OK**.
 
-    - **Subscription**: Select the default subscription
-    - **Resource Group**: Select the assigned Resource group
-    - **Managed Resource group:**  Leave this blank.
-    - **Workspace name**: fabric-synapse<inject key="DeploymentID" enableCopy="false"/>
-    - **Region**: Select the region of your resource group
+    - **Subscription**: Select the default subscription **(1)**
+
+    - **Resource Group**: Select the **fabric-rg (1)** Resource group
+
+    - **Workspace name**: Enter **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (3)**
+
+    - **Region**: <inject key="Region" enableCopy="false"/> **(4)**
 
         ![](./media/image7.png)
 
     - **Select Data Lake Storage Gen2 account:** From subscription
+
     - **Account name:** Create
-    New: **fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/>**
-    - Click **OK**
+
+    - **New:** **fabricsynapsegen2<inject key="DeploymentID" enableCopy="false"/> (1)**
+
+    - Click **OK (2)**
 
         ![](./media/image8.png)
 
-    - **File System Name**: Create
-    New: **synapsefile<inject key="DeploymentID" enableCopy="false"/>**
-    - Click **OK**.
-    - Enter below details and then click on **Next: Security >**.
+    - **File System Name**: **Create (1)**
+
+    - New: **synapsefile<inject key="DeploymentID" enableCopy="false"/> (2)**
+
+    - Click **OK (3)**.
+
+    - Now, click on **Next: Security > (4)**.
 
         ![](./media/image9.png)
 
 1. Configure the **Security** settings by selecting **both Microsoft
     
-    - **SQL Server admin login:** sqladmin
-    - **SQL Password**: password321!
-    - Click **Review + create**
+    - **SQL Server admin login:** `sqladmin` **(1)**
 
-    ![](./media/image11.png)
+    - **SQL Password**: `password321!` **(2)**
+
+    - Click **Review + create (3)**
+
+      ![](./media/image11.png)
 
 1.  In the **Review + submit** tab, once the validation is passed, click on the **Create** button.
 
@@ -88,29 +98,38 @@ By the end of this lab, you will be able to:
 
     ![](./media/image14.png)
 
-1. Click on your **Synapse workspace**.
+1. Click on your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the list.
 
     ![](./media/image15.png)
 
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      > - Hit the Validate button for the corresponding task.
+      > - If you receive a success message, you can proceed to the next task.
+      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+       <validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />    
+
 ## Task 2: Create a dedicated SQL pool
 
-1. In the **Open Synapse Studio** dialog, click **Open** to launch Azure Synapse Studio.
+1. On the **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace Overview page, click click **Open** in the **Open Synapse Studio** dialog to launch Azure Synapse Studio.
 
     ![](./media/image16.png)
 
-1. In Synapse Studio, select **Manage** (left pane).
+1. In Synapse Studio, select **Manage** from the left navigation pane.
 
     ![](./media/image17.png)
 
-1. In Synapse Studio, on the left-side pane, select **Manage** \> **SQL pools** under **Analytics pools** and then click on **New**
+1. Select **SQL pools (1)** under **Analytics pools** and then click on **+ New (2)** to create a new SQL pool.
 
-    ![](./media/image18.png)
+    ![](./media/new0.png)
 
-1. **Configure SQL Pool**
+1. On the Basics tab of **New dedicated SQL pool** page, add the following details:
 
-    - **SQL pool name:** **sql dedicated pool**
-    - **Performance level:** Choose **DW100c**
-    - Click **Review + Create → Create**.
+    - **Dedicated SQL pool name:** **sql dedicated pool (1)**
+
+    - **Performance level:** Choose **DW100c (2)**
+
+    - Click **Review + create (3)**
 
         ![](./media/image19.png)
 
@@ -120,7 +139,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image21.png)
 
-1. Go to **Manage → SQL pools** and confirm the Dedicated SQL Pool shows **Online**
+1. Go to **Manage → SQL pools** and confirm the newly created Dedicated SQL Pool **sql dedicated pool** shows status as **Online**
 
     ![](./media/image22.png)
 
@@ -128,13 +147,20 @@ By the end of this lab, you will be able to:
 
     ![](./media/image23.png)
 
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      > - Hit the Validate button for the corresponding task.
+      > - If you receive a success message, you can proceed to the next task.
+      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+       <validation step="8004f3de-9884-4a7f-9217-913b84b70092" />    
+
 ## Task 3: Place sample data into the primary storage account
 
-1. Navigate to **Synapse Studio**, then open the **Data Hub** and select the **Linked** section.
+1. Navigate to **Synapse Studio**, then open the **Data (1)** from the left navigation pane and select the **Linked (2)** section.
 
     ![](./media/image24.png)
 
-1. Under the **Azure Data Lake Storage Gen2** category, locate the item with your workspace name, such as **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (Primary — asastorageaccount01 (your storage account))**.
+1. Under the **Linked** tab in the Data pane and expand **Azure Data Lake Storage Gen2** to locate and expand your workspace name, such as **fabric-synapse<inject key="DeploymentID" enableCopy="false"/> (Primary — asastorageaccount01 (your storage account))** to view the container.
 
     ![](./media/image25.png)
 
@@ -142,59 +168,53 @@ By the end of this lab, you will be able to:
 
     ![](./media/image26.png)
 
-1. Select **Upload**, browse to `C:\LabFiles\lab file`, choose **NYCTripSmall.parquet**, and then click **Upload** to complete the process.
+1. Select the **synapsefile (Primary)** container under **Azure Data Lake Storage Gen2**, then click **Upload** to add files into the storage container.
 
     ![](./media/image27.png)
 
+1. Click the **folder icon** next to **Select files** to browse and choose files from your local system for upload.
+
     ![](./media/image28.png)
+
+1. Browse to `C:\LabFiles\lab file` **(1)**, choose **NYCTripSmall.parquet (2)**, and click **Open (3)**.
 
     ![](./media/image29.png)
 
-1. Click on **Upload** button.
+1. Click **Upload** to upload the **NYCTripSmall.parquet** file uploaded successfully.
 
     ![](./media/image30.png)
 
-1. The **NYCTripSmall.parquet** file uploaded successfully.
-
-1. Repeat the same steps to upload the remaining **DimDate.csv,
-    Dimension_Employee.csv** files
+1. Repeat the same steps to upload the remaining **DimDate.csv, Dimension_Employee.csv** files
     
     ![](./media/image32.png)
 
     ![](./media/image33.png)
 
-1. Right-click on **NYCTripSmall.parquet** and select **Properties**.
+1. Right-click on **NYCTripSmall.parquet (1)** and select **Properties (2)**.
 
     ![](./media/image40.png)
 
-1. In the **Properties** page, copy the URL and ABFSS path, then save them in Notepad for later use.
+1. In the **Properties** page, copy the **URL and ABFSS path**, then save them in Notepad for later use.
 
     ![](./media/image41.png)
 
 ## Task 4: Integrate with pipelines
 
-1. **In Synapse Studio,** click on **Integrate hub**
+1. **In Synapse Studio,** navigate to the **Integrate (1)** section, click the **+ (2)** button, and select **Pipeline (3)** to create a new data pipeline.
 
-    ![](./media/image42.png)
+    ![](./media/new1.png)
 
-1. Select **+** and select **Pipeline** to create a new pipeline.
-
-    ![](./media/image43.png)
-
-1. Under **Activities**, expand the **Move and transform** category, then drag a **Copy data** activity onto the canvas.
+1. Under **Activities**, expand the **Move and transform (1)** category, then drag a **Copy data (2)** activity onto the canvas.
 
     ![](./media/image44.png)
 
     ![](./media/image45.png)
 
-1. On the **Source** page, select **+** **New**
-
-    ![](./media/image46.png)
+1. On the **Source** tab, select **+** **New**.
 
     ![](./media/image47.png)
 
-1. In **New integration dataset**, select the **Azure Data Lake Storage
-    Gen2** tile.
+1. In **New integration dataset** pane, select the **Azure Data Lake Storage Gen2** tile.
 
     ![](./media/image48.png)
 
@@ -202,14 +222,12 @@ By the end of this lab, you will be able to:
 
     ![](./media/image49.png)
 
-1. In **Set properties**, click **+ New** under **Linked service** to
-    create a new connection to the storage account
+1. In **Set properties** pane, click **+ New** under **Linked service** to
+    create a new connection to the storage account.
 
     ![](./media/image50.png)
 
-1.  In **New linked service**, provide a name, select your **Azure
-    subscription** and **Storage account**, then click **Test
-    connection** and **Create** after a successful validation.
+1. In **New linked service**, provide a name, select your **Azure subscription (1)** and **Storage account (2)** from the drop-down, then click **Test connection (3)** and **Create (4)** after a successful validation.
 
     ![](./media/image51.png)
 
@@ -217,34 +235,44 @@ By the end of this lab, you will be able to:
 
     ![](./media/image52.png)
 
-1. Select **synapsefile<inject key="DeploymentID" enableCopy="false"/>**, choose the **DimDate.csv** file, and then click **OK**.
+1. Select **synapsefile<inject key="DeploymentID" enableCopy="false"/>**, choose the **DimDate.csv (1)** file, and then click **OK (2)**.
 
     ![](./media/image53a.png)
 
     ![](./media/image53.png)
 
-1. In the Synapse pipeline, go to the **Sink** tab within the **Copy Data** activity to configure the destination settings for the dataset.
+1. Go to the **Connection (1)** tab, configure the file settings such as delimiter and encoding, and ensure the **Escape character** is set to **Double quote (") (2)** for correct data parsing.
 
-    ![](./media/image54.png)
+    ![](./media/new3.png)
 
-1. On the **Source** page, select **+** **New**
+1. Click on **Pipeline 1** tab.
 
-    ![](./media/image55.png)
+    ![](./media/image67.png)    
 
-1. In **New integration dataset**, select the **Azure Synapse
-    Analytics** tile.
+1. In the Synapse pipeline, go to the **Sink** tab within the **Copy Data** activity, select **+** **New** to configure the destination settings for the dataset.
+
+    ![](./media/new2.png)
+
+1. In **New integration dataset**, select the **Azure Synapse Analytics** tile, then click **Continue**.
 
     ![](./media/image56.png)
 
-1. In the **New Linked Service** setup, configure the connection to the Synapse SQL dedicated pool by selecting the **Azure subscription**, **server name**, and **database name**. Enter the **User name** as *sqladmin* and the *password* as **password321!**, then click **Test connection**. If the test is successful, click **Create**.
+1. In the **New Linked Service** setup pane, configure the connection to the Synapse SQL dedicated pool by adding the following details:
 
-    ![](./media/image58.png)
+    - **Azure subscription**: Select your subscription from the drop-down **(1)** 
+    - **Server name**: Select your **fabric-synapse<inject key="DeploymentID" enableCopy="false"/>** workspace from the drop-down **(2)**
+    - **Database name**: Select **sql dedicated pool (3)** from the drop-down
+    -  **User name**: Enter *sqladmin*  **(4)**
+    - **Password**: Enter *password321!* **(5)** 
+    - Click **Test connection (6)**. If the test is successful, click **Create (7)**.
 
-1. In the **Set Properties** window, specify the table name as **dbo.fabric**, set the **Import schema** option to **None**, and then click **OK** to confirm the configuration.
+      ![](./media/image58.png)
+
+1. In the **Set Properties** window,, enable **Enter manually (1)**, specify the schema as **dbo (2)** and the table name as **fabric (3)**, select **None (4)** for Import schema, and then click **OK (5)** to save the configuration.
 
     ![](./media/image59.png)
 
-1. Select the **Auto create table** option in the Sink settings and then click on the **Mapping** tab to proceed.
+1. Select the **Auto create table (1)** option under **Sink** tab and then click on the **Mapping (2)** tab to proceed.
 
     ![](./media/image60.png)
 
@@ -252,21 +280,21 @@ By the end of this lab, you will be able to:
 
     ![](./media/image61.png)
 
-1. Click **Debug**
+1. Click **Debug** to run the pipeline and validate the data copy activity before publishing.
 
     ![](./media/image62.png)
 
     ![](./media/image63.png)
 
-1. Navigate back to the **Copy data** activity, click the **Source** tab, and select **Open** to view the source dataset configuration.
+1. Navigate back to the **Copy data (1)** activity, click the **Source (2)** tab, and click **Open (3)** next to **Source dataset** to view the configuration.
 
     ![](./media/image64.png)
 
-1. Click **Browse** folder
+1. Click **Browse** folder to add the file.
 
     ![](./media/image65.png)
 
-1. Select the **Dimension_Employee.csv** file and click **OK**.
+1. Select the **Dimension_Employee.csv (1)** file and click **OK (2)**.
 
     ![](./media/image66.png)
 
@@ -274,15 +302,15 @@ By the end of this lab, you will be able to:
 
     ![](./media/image67.png)
 
-1. Click on the **Sink** tab and then select **Open** to view the sink dataset configuration.
+1. Click on the **Sink (1)** tab and then select **Open (2)** to view the sink dataset configuration.
 
     ![](./media/image68.png)
 
-1. In the **Sink** dataset configuration, enter the schema as **dbo** and specify the table name as **fabric_employee**, then return to **Pipeline 1** to continue the setup.
+1. Enable **Enter manually (1)**, specify the schema as **dbo (2)** and table name as **fabric_employee (3)**, and return to **Pipeline 1 (4)** to continue configuring the pipeline.
 
     ![](./media/image69.png)
 
-1. Go to the **Mapping** tab and click **Import schema**.
+1. Go to the **Mapping (1)** tab and click **Import schemas (2)**.
 
     ![](./media/image70.png)
 
@@ -292,37 +320,77 @@ By the end of this lab, you will be able to:
 
     ![](./media/image73.png)
 
-1. **In Synapse Studio,** click on the **Data hub**.
+1. **In Synapse Studio,** click on the **Data**.
 
     ![](./media/image74.png)
 
-1. Verify that the **files** deployed successfully.
+1. Under **Workspace** tab, expand the **SQL database**, open the **sql dedicated pool (SQL)**, navigate to **Tables**, and verify that the tables **dbo.fabric** and **dbo.fabric_employee** are successfully created.
 
     ![](./media/image75.png)
 
 ## Task 5: Create a Fabric workspace
 
-1. Open your browser and navigate to: **https://app.fabric.microsoft.com/** then press **Enter**.
+1. Open your browser and navigate to the following URL to open **Microsoft Fabric** portal: 
+
+    ```
+    https://app.fabric.microsoft.com/
+    ```
+
+1. Enter the following credentials to login to the Fabric portal:  
+
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+    - **Password:** <inject key="AzureAdUserPassword"></inject>    
 
 1. On the **Fabric Home** page click on **+ New Workspaces** as shown in the image below.
 
     ![](./media/image76.png)
 
-1. On the **Create a workspace** pane that appears to the right, enter the following details, and then click **Apply**.
+1. On the **Create a workspace** pane that appears to the right, enter the following details, and then click **Apply (4)**.
 
     | Field                   | Value                                                                 |
     |------------------------|-----------------------------------------------------------------------|
-    | Name                   | **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/>**  |
-    | Advanced               | Select Fabric                                                         |
-    | Default storage format | Small semantic model storage format                                           |
+    | Name                   | **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/> (1)**  |
+    | Advanced               | Select **Fabric (2)**                                                        |
+    | Default storage format | **Small semantic model storage format (3)**                                           |
 
-    ![](./media/image77.png)
+    ![](./media/new4.png)
 
-    ![](./media/image78.png)
+    ![](./media/new5.png)
 
 1. The Workspace is now created.
 
-    ![](./media/image79.png)
+1. Select **Manage access** from the workspace menu.
+
+    ![](./media/new6.png)
+
+1. In the Manage access pane, select **+ Add people or groups**.
+
+    ![](./media/new7.png)
+
+1. In the Add people pane, enter below **URL (1)** in the search box, then select the **Admin (3)** role from the dropdown next to **Viewer (2)** role, and click **Add (4)** to assign permissions.
+ 
+
+    ```
+    https://sandboxailabs1012.onmicrosoft.com/cloudlabs.ai
+    ```
+
+    OR
+
+    ```
+    https://sandboxailabs1013.onmicrosoft.com/cloudlabs.ai
+    ```
+
+    ![](./media/new8.png)  
+
+    ![](./media/new10.png)      
+
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      > - Hit the Validate button for the corresponding task.
+      > - If you receive a success message, you can proceed to the next task.
+      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+       <validation step="875974db-278a-4941-80d9-42f215abd3e2" />    
 
 ## Task 6: Copy metadata
 
@@ -331,21 +399,21 @@ By the end of this lab, you will be able to:
 
     ![](./media/image80.png)
 
-1. In the **Migrate to Fabric** source menu, under **Migrate to
-    Fabric**, select the **Azure Synapse Analytics dedicated SQL
-    pool** tile.
+1. In the **Migrate to Fabric** source menu, under **Migrate to a warehouse**, select the **Azure Synapse Analytics dedicated SQL pool** tile.
 
     ![](./media/image81.png)
 
 1. Select **Next**.
-    > **Note:** You may see the **Choose your method** screen select the default option **Upload a file with the source metadata**, then click **Next**.
-        ![](./media/image82.png)
+
+    > **Note:** You may see the **Choose your method** screen select the default option **Upload a file with the source metadata (1)**, then click **Next (2)**.
+
+      ![](./media/image82.png)
 
 1. Click **Choose file**
 
     ![](./media/image83.png)
 
-1. Browse to `C:\LabFiles\lab file`, select the **AdventureWorks.DACPAC** file, and click **Open**.
+1. Browse to `C:\LabFiles\lab file` **(1)**, select the **AdventureWorks.dacpac (2)** file, and click **Open (3)**.
 
     ![](./media/image84.png)
 
@@ -353,11 +421,11 @@ By the end of this lab, you will be able to:
 
     ![](./media/image85.png)
 
-1. On the **Set the destination** page, enter the **Fabric workspace name** and specify a new warehouse name as **Migration_Warehouse**, then click **Next**.
+1. On the **Set the destination** page, select the **Fabric_Migration<inject key="DeploymentID" enableCopy="false"/> (1)** workspace from the drop-down and specify a new warehouse name as **Migration_Warehouse (2)**, then click **Next (3)** to proceed.
 
     ![](./media/image86.png)
 
-1.  Review your inputs and select **Migrate**. A new warehouse item is
+1. Review your inputs and select **Migrate**. A new warehouse item is
     created and the metadata migration begins.
 
     ![](./media/image87.png)
@@ -370,19 +438,17 @@ By the end of this lab, you will be able to:
 
     ![](./media/image89.png)
 
-1.  Review the metadata migration summary in the Migration Assistant.
+1. Review the metadata migration summary in the Migration Assistant.
     You'll see the count of migrated objects and the objects that need
     to be fixed before they can be migrated.
 
-    ![](./media/image90.png)
+    ![](./media/new9.png)
 
-1.  Select **Show migrated objects** to expand the section and see a
+1. Select **Show migrated objects** to expand the section and see a
     list of objects that have been successfully migrated to your Fabric
     warehouse.
 
     ![](./media/image90.png)
-
-    ![](./media/image91.png)
 
     > The **State** column indicates whether an object’s metadata was modified during translation to ensure compatibility with the Fabric Warehouse. For example, certain column data types or T-SQL constructs may be automatically converted to supported equivalents. The **Details** column provides additional information about the specific adjustments made to each object.
 
@@ -398,16 +464,23 @@ By the end of this lab, you will be able to:
 
     ![](./media/image94.png)
 
-1. Optionally, select the **Export** menu to download a migration summary as an Excel file or a CSV.
+1. Optionally, select the **Export (1)**, then select **Downlaod as Excel file (2)** from the menu to download a migration summary as an Excel file.
 
     - The downloaded Excel file is a well-structured workbook containing two worksheets: **Migrated Objects** and **Objects To Fix**. It is MIP-compliant and adheres to your organization’s sensitivity labeling policies.
     - The CSV is lightweight and tool-friendly.
 
-    ![](./media/image95.png)
+      ![](./media/image95.png)
 
 1. Select the exported file to review the **CSV** data.
 
     ![](./media/image96.png)
+
+     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      > - Hit the Validate button for the corresponding task.
+      > - If you receive a success message, you can proceed to the next task.
+      > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
+      > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+       <validation step="8c6aea1d-fccd-484f-af63-01504c3d9ab5" />    
 
 ## Task 7: Fix problems using Migration Assistant
 
@@ -421,10 +494,11 @@ By the end of this lab, you will be able to:
 
 1. Review and fix the broken scripts using the error information and documentation.
 
-1. To use Copilot for AI-powered assistance in resolving errors, select **Fix query errors** in the **Suggested action** section. Copilot will update the script with recommended changes. Since it is AI-driven, review the suggestions carefully and make any necessary adjustments.
+1. Click **Run (1)** to execute the script, and if any issues are detected, select **Fix query errors (2)** in the **Suggested action** section, then click on **Accept** to keep the changes suggested by Copilot will update the script with recommended changes. Since it is AI-driven, review the suggestions carefully and make any necessary adjustments.
 
-    ![](./media/image101.png)
-    > **Note:** If **Step 4** does not complete successfully, you may need to run it again. Since this step is AI-assisted, occasional inconsistencies can occur. Simply repeat the step until it executes correctly.
+    ![](./media/new11.png)
+
+    > **Note:** If **Step 4** does not complete successfully, you may need to run it again. Since this step is AI-assisted, occasional inconsistencies can occur. Simply repeat step 4 until it executes correctly.
 
 1. Select **Run** to validate and create the object.
 
@@ -450,26 +524,25 @@ By the end of this lab, you will be able to:
 
     ![](./media/image106.png)
 
-1. Assign the name **migrate_copyjob** to the new job, then click **Create**.
+1. Assign the name **migrate_copyjob (1)** to the new job, then click **Create (2)**.
 
-    ![](./media/image107.png)
+    ![](./media/new12.png)
 
-1. On the **Connect to data source** page, provide the connection credentials for the source **Azure Synapse Analytics (SQL DW)** warehouse, then click **Next**.
-
+1. On the **Connect to data source** page, navigate to **+ New (1)** tab, then select **Azure Synapse Analytics (SQL DW) (2)** warehouse from the list.
     ![](./media/image108.png)
 
-1. On the **Connection settings** tab, enter the required details below and click **Next**.
+1. On the **Connection settings** tab, enter the required details below and click **Next (4)**.
 
     | Field    | Value                                              |
     |----------|----------------------------------------------------|
-    | Server   | Dedicated SQL server URL (from Task 2 → Step 7)    |
-    | Database | sql dedicated pool                  |
-    | Username | sqladmin                                           |
-    | Password | password321!                                       |
+    | Server   | Enter Dedicated SQL Endpoint that you pasted into the Notepad in **Task 2 → Step 7** **(1)**   |
+    | Database | **sql dedicated pool (2)**                  |
+    | Username | `sqladmin`  **(3)**                                        |
+    | Password | `password321!`  **(3)**                                     |
 
     ![](./media/image109.png)
 
-1. On the **Choose data** page, select the tables you want to migrate. The object metadata should already exist in the target warehouse, then click **Next**.
+1. On the **Choose data** page, select the table **dbo.fabric (1)** to migrate. The object metadata should already exist in the target warehouse, then click **Next (2)**.
 
     ![](./media/image110.png)
 
@@ -503,15 +576,16 @@ warehouse.
 
 1. Navigate to your Synapse workspace.
 
-1. In Synapse Studio, navigate to the **Develop** hub, click the **+** button to add a new resource, then select **SQL script**.
+1. In Synapse Studio, navigate to the **Develop (1)** hub, click the **+ (2)** button to add a new resource, then select **SQL script (3)**.
 
     ![](./media/image116.png)
 
-1. Ensure that the SQL script is connected to the **SQL dedicated pool** by selecting it from both the **Connect to** dropdown and the **Use database** dropdown, as shown in the image.
+1. Ensure that the SQL script is connected to the **SQL dedicated pool** by selecting it from both the **Connect to (1)** dropdown and the **Use database (2)** dropdown, as shown in the image.
 
     ![](./media/image117.png)
 
-1. Enter the following code into the editor and click **Run** to execute it:
+1. Enter the following code **(1)** into the editor and click **Run (2)** to execute it. This query is used to identify which applications, users, and IP addresses are connecting to an Azure Synapse Dedicated SQL Pool for monitoring and auditing purposes.
+
 
     ```
     SELECT DISTINCT CASE 
@@ -568,8 +642,10 @@ Microsoft Fabric workspace and used the **Migration Assistant** to
 translate and migrate metadata, fix compatibility issues, and copy data
 into the new warehouse.
 
-Finally, you learned how to reroute external applications—such as Power
-BI, pipelines, and ETL tools—to the Fabric environment to ensure smooth
+Finally, you learned how to reroute external applications such as Power
+BI, pipelines, and ETL tools to the Fabric environment to ensure smooth
 operational transition. Completion of this lab equips you with essential
 skills needed for modernizing analytical workloads using Microsoft
 Fabric.
+
+## You have successfully completed this Lab. Kindly click Next >> to proceed further.
