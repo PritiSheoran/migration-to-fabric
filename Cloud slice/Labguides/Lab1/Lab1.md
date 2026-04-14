@@ -102,9 +102,7 @@ By the end of this lab, you will be able to:
 
     ![](./media/image15.png)
 
-     > **Congratulations** on completing the task! Now, it's time to validate it. 
-
-     <validation step="e3fdb79a-98cb-4e59-83c9-63793a1bb5fc" />    
+     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.  
 
 ## Task 2: Create a dedicated SQL pool
 
@@ -144,12 +142,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image23.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="8004f3de-9884-4a7f-9217-913b84b70092" />    
+     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.     
 
 ## Task 3: Place sample data into the primary storage account
 
@@ -382,12 +375,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/new10.png)      
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="875974db-278a-4941-80d9-42f215abd3e2" />    
+     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.    
 
 ## Task 6: Copy metadata
 
@@ -472,12 +460,7 @@ By the end of this lab, you will be able to:
 
      ![](./media/image96.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task.
-> - If you receive a success message, you can proceed to the next task.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-<validation step="8c6aea1d-fccd-484f-af63-01504c3d9ab5" />    
+     > **Congratulations** on completing the task! Now, navigate to the Lab Validation tab and click Validate.     
 
 ## Task 7: Fix problems using Migration Assistant
 
