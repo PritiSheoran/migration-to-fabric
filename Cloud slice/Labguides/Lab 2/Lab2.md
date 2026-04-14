@@ -81,13 +81,13 @@ By the end of this lab, you will be able to:
 
 1. Select **New Connection → Azure Synapse Analytics (SQL)** and enter the following details, then click **Connect (6)**:
 
-    | Field    | Value                                              |
-    |----------|----------------------------------------------------|
+    | Field    | Value   |
+    |----------|---------|
     | Server   | Enter Dedicated SQL Endpoint that you pasted into the Notepad in **Task 2 → Step 7** **(1)**   |
-    | Database | **sql dedicated pool (2)**                  |
+    | Database | **sql dedicated pool (2)** |
     | Authentication | **Basic (3)**      |
-    | Username | `sqladmin`  **(4)**                                        |
-    | Password | `password321!`  **(5)**                                     |
+    | Username | `sqladmin`  **(4)**         |
+    | Password | `password321!`  **(5)**     |
 
     ![](./media/new4.png)
 
